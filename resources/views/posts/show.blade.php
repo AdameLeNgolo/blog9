@@ -46,17 +46,10 @@
 
         <div>
 
-            <div class="flex justify-center flex-wrap">
-                @foreach ($posts as $post)
-                    <div class="m-2 border border-black bg-gray-300 w-3/12 p-4 ">
+                    <div class="m-2 border border-black bg-gray-300 w-6/12 p-4 mx-auto ">
                         <a href="{{ route('posts.show', $post->id) }}" class="text-xl font-semibold">{{ $post->libelle }}</a>
                         <p>{{ $post->description }}</p>
                     </div>
-                @endforeach
-            </div>
-            <div class="max-w-md mx-auto">
-                {{ $posts->links() }}
-            </div>
         </div>
     </body>
 </html>
