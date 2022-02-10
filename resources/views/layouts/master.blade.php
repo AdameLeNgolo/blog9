@@ -24,6 +24,17 @@
         </style>
     </head>
     <body class="antialiased">
+
+        <div class="py-6 text-center ">
+            <a href="/" class="text-7xl font-bold italic">Thieummmm!!! Blog</a>
+        </div>
+
+        <div class="flex justify-center space-x-5 mx-auto my-5">
+            <a href="/" class="text-xl font-bold border border-black px-6 py-3">Home</a>
+            <a href="{{ route('posts.create') }}" class="text-xl font-bold border border-black px-6 py-3"> New Article</a>
+            <a href="/about" class="text-xl font-bold border border-black px-6 py-3"> About</a>
+        </div>
+
         @yield('content')
     </body>
 </html>
