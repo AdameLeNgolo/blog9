@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+
 
 class PostController extends Controller
 {
@@ -38,7 +41,9 @@ class PostController extends Controller
     {
         $post = Post::create([
             'libelle' => $request->libelle,
-            'description' => $request->description
+            'slug' => Str::slug($request->libelle),
+            'description' => $request->description,
+            'user_id' => Auth::id()
         ]);
 
         return Redirect::route('home');
