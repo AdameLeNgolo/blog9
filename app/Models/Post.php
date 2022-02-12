@@ -14,6 +14,17 @@ class Post extends Model
         'description'
     ];
 
+
+    /**
+     * Get the user that owns the Post
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
     /**
      * Get the route key for the model.
      *
@@ -23,4 +34,7 @@ class Post extends Model
     {
         return 'slug';
     }
+
+
+
 }

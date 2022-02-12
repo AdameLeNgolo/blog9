@@ -36,5 +36,10 @@
         </div>
 
         @yield('content')
+        
+
+        <footer class="bg-black text-center mt-10 py-6 text-white">
+            <p>Copyright&copy; {{ config('app.name') }} | Developed by <a href="https://twitter.com/AdameLeNGolo" class="text-cyan-600">AdameLeNGolo</a></p>
+        </footer>
     </body>
 </html>

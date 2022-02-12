@@ -30,7 +30,7 @@
                         <a href="{{ route('posts.show', $post->slug) }}" class="text-2xl font-semibold">{{ $post->libelle }}</a>
                         <p class="mt-2 text-left flex justify-around">
                             <span class="text-gray-800">{{ $post->created_at }}</span>
-                            <span class="text-gray-800">Lengolo</span>
+                            <span class="text-gray-800">{{ $post->user->name }}</span>
                         </p>
                     </div>
                     <p class="line-clamp-6">
