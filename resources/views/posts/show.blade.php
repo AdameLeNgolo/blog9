@@ -19,15 +19,22 @@
             @endif
         </div>
 
-        <div>
+        {{-- <div>
             <a href="{{ route('posts.create') }}">Ajouter un article</a>
-        </div>
+        </div> --}}
 
         <div>
 
-                    <div class="m-2 border border-black bg-gray-300 w-6/12 p-4 mx-auto ">
-                        <a href="{{ route('posts.show', $post->id) }}" class="text-xl font-semibold">{{ $post->libelle }}</a>
-                        <p>{{ $post->description }}</p>
+            <div class="m-2  w-6/12 p-4 mx-auto ">
+                <div class="text-center">
+                    <a href="{{ route('posts.show', $post->slug) }}" class="text-3xl font-semibold">{{ $post->libelle }}</a>
+                    <div class="text-left">
+                        <span class="text-gray-500 text-sm">{{ $post->created_at }}</span>
                     </div>
+                </div>
+                <div class="mt-6 text-justify">
+                    <p>{{ $post->description }}</p>
+                </div>
+            </div>
         </div>
 @endsection
